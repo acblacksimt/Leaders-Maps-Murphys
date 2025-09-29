@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaders Real Estate - Murphy USA Distance Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            color: #7c3aed;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .intro p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .property-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+            border-color: #7c3aed;
+        }
+
+        .property-card h3 {
+            color: #7c3aed;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .property-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .view-map-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+        }
+
+        .view-map-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+        }
+
+        .features {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .features h3 {
+            color: #6d28d9;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #ddd6fe;
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h4 {
+            color: #6d28d9;
+            margin-bottom: 5px;
+        }
+
+        .feature-text p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #4c1d95 0%, #2e1065 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #c4b5fd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #ddd6fe;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .properties-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 Leaders Real Estate</h1>
+            <p>Murphy USA Gas Station Distance Analysis</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <h2>Florida Properties Analysis</h2>
+                <p>Explore interactive maps showing the closest Murphy USA gas stations to each of our Florida properties. 
+                   Each map displays distance rings, detailed location information, and the top 3 nearest Murphy USA stations.</p>
+            </div>
+
+            <div class="properties-grid">
+                <div class="property-card">
+                    <h3>📍 Hawthorne</h3>
+                    <p><strong>Address:</strong> 6004 SE US Highway 301, Hawthorne, FL 32640</p>
+                    <a href="map_Hawthorne_6004_SE_US_Hwy_301.html" class="view-map-btn">🗺️ View Map</a>
+                </div>
+
+                <div class="property-card">
+                    <h3>📍 Maricamp-Ocala</h3>
+                    <p><strong>Address:</strong> 6810 SE Maricamp Road, Ocala, FL 34472</p>
+                    <a href="map_Maricamp_6810_SE_Maricamp_Rd.html" class="view-map-btn">🗺️ View Map</a>
+                </div>
+
+                <div class="property-card">
+                    <h3>📍 Mt. Dora</h3>
+                    <p><strong>Address:</strong> Spring Harbor Blvd, Mt. Dora, FL 32757</p>
+                    <a href="map_Mt._Dora_Spring_Harbor_Blvd.html" class="view-map-btn">🗺️ View Map</a>
+                </div>
+
+                <div class="property-card">
+                    <h3>📍 St. Augustine</h3>
+                    <p><strong>Address:</strong> 840 FL-16, St. Augustine, FL 32084</p>
+                    <a href="map_St._Augustine_840_FL-16.html" class="view-map-btn">🗺️ View Map</a>
+                </div>
+
+                <div class="property-card">
+                    <h3>📍 St. Cloud</h3>
+                    <p><strong>Address:</strong> 5024 E Irlo Bronson Memorial Hwy, St. Cloud, FL 34771</p>
+                    <a href="map_St._Cloud_5024_E_Irlo_Bronson.html" class="view-map-btn">🗺️ View Map</a>
+                </div>
+
+                <div class="property-card">
+                    <h3>📍 Tampa</h3>
+                    <p><strong>Address:</strong> 5911 Ehrlich Road, Tampa, FL 33625</p>
+                    <a href="map_Tampa_Ehrlich_5911_Ehrlich_Rd.html" class="view-map-btn">🗺️ View Map</a>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>🎯 Map Features</h3>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">📏</div>
+                        <div class="feature-text">
+                            <h4>Distance Rings</h4>
+                            <p>5, 10, and 15-mile radius visualization</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🏪</div>
+                        <div class="feature-text">
+                            <h4>Murphy USA Locations</h4>
+                            <p>Top 3 closest gas stations marked</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-text">
+                            <h4>Official Branding</h4>
+                            <p>Leaders RE & Murphy USA logos</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-text">
+                            <h4>Detailed Info</h4>
+                            <p>Addresses, distances, and rankings</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-text">
+                            <h4>Interactive Maps</h4>
+                            <p>Click, zoom, and explore freely</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-text">
+                            <h4>Mobile Friendly</h4>
+                            <p>Works on any device</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Leaders Real Estate</strong></p>
+            <p>Professional Property Management & Real Estate Services</p>
+            <p>Visit us at <a href="https://leadersre.com" target="_blank">leadersre.com</a></p>
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+                © 2025 Leaders Real Estate | Murphy USA Distance Analysis
+            </p>
+        </div>
+    </div>
+</body>
+</html>
